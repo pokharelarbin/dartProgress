@@ -50,5 +50,5 @@ do{
    }
    print('Inside loop $count');
 }while(count<=10);
-print('points after the do while loop')'
+print('points after the do while loop');
    
