@@ -25,7 +25,7 @@ void main(){
 	if(a>5){
 		print(a+b);
 	}
-	elseif (a<2){
+	else if (a<2){
 		print(b-a);
 	}
 	else{
