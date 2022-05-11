@@ -1,0 +1,4 @@
+#Tue May 10 17:41:10 NPT 2022
+base.0=/home/dada/Videos/cards/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
