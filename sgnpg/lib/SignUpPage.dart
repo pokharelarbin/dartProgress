@@ -10,6 +10,7 @@ class SignUpPage extends StatelessWidget {
             image: DecorationImage(
               image: NetworkImage(
                   'https://images.pexels.com/photos/7721926/pexels-photo-7721926.jpeg?cs=srgb&dl=pexels-matteus-silva-7721926.jpg&fm=jpg'),
+              fit: BoxFit.cover,
             ),
           ),
           child: Column(
