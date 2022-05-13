@@ -1,25 +1,44 @@
 import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 class SignUpPage extends StatelessWidget {
+  final style = const TextStyle(
+    // height: 31,
+    letterSpacing: 1.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.white,
+    fontSize: 28,
+    fontFamily: 'Spartan',
+  );
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(
-                  'https://images.pexels.com/photos/7721926/pexels-photo-7721926.jpeg?cs=srgb&dl=pexels-matteus-silva-7721926.jpg&fm=jpg'),
+                  'https://images.pexels.com/photos/10377112/pexels-photo-10377112.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'),
               fit: BoxFit.cover,
             ),
+            // gradient: LinearGradient(
+            //   colors: [
+            //     Color.fromARGB(255, 54, 113, 161),
+            //     Color.fromARGB(255, 24, 77, 27),
+            //   ],
+            //   begin: Alignment.topLeft,
+            //   end: Alignment.bottomRight,
+            // ),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
                 child: Container(
+                  height: 64,
+                  width: 184,
                   // alignment: Alignment.centerLeft,
                   decoration: BoxDecoration(
                       border: Border.all(
@@ -27,78 +46,100 @@ class SignUpPage extends StatelessWidget {
                         width: 1.0,
                         style: BorderStyle.solid,
                       ),
-                      borderRadius: BorderRadius.only(
+                      color: Colors.blue,
+                      borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(
-                          12,
+                          40,
                         ),
-                        bottomLeft: Radius.circular(12),
+                        bottomLeft: Radius.circular(40),
                       )),
-                  child: Text(
-                    ' ActiVista ',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                  child: const Center(
+                    child: Text.rich(
+                      TextSpan(
+                          text: 'Acti',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                          children: [
+                            TextSpan(
+                              text: 'Vista',
+                              style: TextStyle(fontWeight: FontWeight.normal),
+                            )
+                          ]),
+                      style: TextStyle(
+                          fontSize: 28,
+                          color: Colors.white,
+                          letterSpacing: 2,
+                          fontFamily: 'Spartan'),
+                    ),
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              // const SizedBox(height: 5),
               Text(
                 '  Welcome',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: style,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 '  Your Name:',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: style,
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: TextField(
                   // cursorHeight: 15,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Loram Ipsum',
+                    fillColor: Colors.white,
+                    filled: true,
+                    hintText: 'Loram Ipsum',
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 '  Your Email:',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: style,
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(24, 10, 15, 0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'loremIpsum@email.com',
+                    hintText: 'loremIpsum@email.com',
+                    fillColor: Colors.white,
+                    filled: true,
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Text(
                 '  Your Password:',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                style: style,
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(24, 10, 15, 0),
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Password',
+                    hintText: 'Password',
+                    fillColor: Colors.white,
+                    filled: true,
                   ),
                   obscureText: true,
                   enableSuggestions: false,
                   autocorrect: false,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                padding: const EdgeInsets.fromLTRB(24, 10, 15, 0),
                 child: Container(
-                  padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   // color: Colors.purple,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
+                    color: Colors.blue,
                     border: Border.all(
                       color: Colors.black,
                       width: 1.0,
@@ -108,29 +149,27 @@ class SignUpPage extends StatelessWidget {
                   ),
                   child: Text(
                     'Sign Up',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w700),
+                    style: style,
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Row(
-                children: [
-                  Text(
-                    '     Tap Here ',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'if you already have an account',
-                    style: TextStyle(
-                      fontSize: 18,
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
+                  children: const [
+                    Text(
+                      'Tap Here ',
+                      style: TextStyle(fontSize: 18, color: Colors.blue),
                     ),
-                  ),
-                ],
+                    Text(
+                      'if you already have an account',
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
