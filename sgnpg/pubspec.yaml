@@ -70,4 +70,6 @@ flutter:
         - asset: fonts/Spartan-Regular.ttf
         - asset: fonts/Spartan-Bold.ttf
           weight: 700
+        - asset: fonts/Spartan-SemiBold.ttf
+          weight: 400
  
